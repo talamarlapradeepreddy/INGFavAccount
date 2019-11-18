@@ -81,19 +81,26 @@
 			<artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.3</version>
 		</dependency>
-	</dependencies>
+	</dependencies><distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>ip-172-31-46-39.ap-south-1.compute.internal-releases</name>
+        <url>http://13.235.24.201:8081/artifactory/ing-fav</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>ip-172-31-46-39.ap-south-1.compute.internal-snapshots</name>
+        <url>http://13.235.24.201:8081/artifactory/ing-fav</url>
+    </snapshotRepository>
+</distributionManagement>>
 	
-        <distributionManagement>
-  <snapshotRepository>
-    <id>artifoctory</id>
-    <url>http:/http://13.235.24.201:8081/artifactory/webapp/#/home/</url>
-  </snapshotRepository>
-</distributionManagement>
+	
+	
+        
 
 
 	<build>
-		<plugins>
-			<plugin>
+		<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
